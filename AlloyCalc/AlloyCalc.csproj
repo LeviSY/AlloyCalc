@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\background.png" />
+    <None Remove="resources\bismuth_bronze.png" />
+    <None Remove="resources\blackbronze.png" />
+    <None Remove="resources\brass.png" />
+    <None Remove="resources\copper.png" />
+    <None Remove="resources\missing_image.png" />
+    <None Remove="resources\tin.png" />
+    <None Remove="resources\tin_bronze.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\blackbronze.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\background.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\bismuth_bronze.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\brass.png" />
+    <Resource Include="resources\copper.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\missing_image.png" />
+    <Resource Include="resources\tin.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\tin_bronze.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
