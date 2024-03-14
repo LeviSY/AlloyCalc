@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlloyCalc"
         mc:Ignorable="d"
-        Title="BronzeCalc" Height="480" Width="720">
-    <Grid>        
+        Title="Calculator" Height="480" Width="720">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="30*"/>
             <RowDefinition Height="156*"/>
             <RowDefinition Height="39*"/>
-            <RowDefinition Height="90*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="25*"/>
             <RowDefinition Height="18*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="20*"/>
@@ -20,24 +21,26 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="13*"/>
-            <ColumnDefinition Width="85*"/>
-            <ColumnDefinition Width="101*"/>
-            <ColumnDefinition Width="10*"/>
-            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="84*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="69*"/>
-            <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="62*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="68*"/>
             <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="79*"/>
-            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="17*"/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="resources/background.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Viewbox Grid.Column="3" Grid.ColumnSpan="8" Grid.Row="1">
+        <Viewbox Grid.Column="4" Grid.ColumnSpan="7" Grid.Row="1">
             <ComboBox 
                 Name="AlloySelection"
                 SelectedIndex="0" 
@@ -51,8 +54,8 @@
                 <ComboBoxItem Content="Brass"/>
             </ComboBox>
         </Viewbox>
-        
-        <Viewbox Grid.Column="5" Grid.ColumnSpan="4" Grid.Row="3">
+
+        <Viewbox Grid.Column="6" Grid.ColumnSpan="4" Grid.Row="3">
             <TextBox x:Name="TotalAlloyValue" 
                 Text=""
                 PreviewTextInput="NumberValidationTextBox"
@@ -69,10 +72,10 @@
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
-            </TextBox>                
+            </TextBox>
         </Viewbox>
-        
-        <Viewbox Grid.Row="5" Grid.Column="1" Grid.RowSpan="3">
+
+        <Viewbox Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="1" >
             <Border BorderThickness="3" BorderBrush="#FF3C1617" >
                 <Image x:Name="metal_1" 
                        Source="resources/copper.png" 
@@ -84,7 +87,7 @@
                 </Border.Resources>
             </Border>
         </Viewbox>
-        <Viewbox Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="3">
+        <Viewbox Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="3">
             <Border BorderThickness="3" BorderBrush="#FF3C1617">
                 <Image x:Name="metal_2"
                        Source="/resources/tin.png" 
@@ -96,7 +99,7 @@
                 </Border.Resources>
             </Border>
         </Viewbox>
-        <Viewbox Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="5" Grid.RowSpan="3">
+        <Viewbox Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="3">
             <Border BorderThickness="3" BorderBrush="#FF3C1617">
                 <Image x:Name="metal_3" 
                        Source="/resources/missing_image.png" 
@@ -108,10 +111,10 @@
                 </Border.Resources>
             </Border>
         </Viewbox>
-        <Viewbox Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Viewbox Grid.Column="2" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Label 
                 x:Name="metal_cost1"
-                Content="123" 
+                Content="0" 
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
                 FontSize="30" 
                 Background="#FF443424" 
@@ -125,10 +128,10 @@
                 />
         </Viewbox>
 
-        <Viewbox Grid.Column="7" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Viewbox Grid.Column="8" Grid.Row="7" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Label 
                 x:Name="metal_cost2"
-                Content="123" 
+                Content="0" 
                 Height="50"
                 Width="101" 
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
@@ -141,7 +144,7 @@
                 Foreground="White" />
         </Viewbox>
 
-        <Viewbox Grid.Column="12" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Viewbox Grid.Column="13" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="2">
             <Label 
                 x:Name="metal_cost3"
                 Content="0" 
@@ -155,6 +158,60 @@
                 HorizontalContentAlignment="Center" 
                 VerticalContentAlignment="Top" 
                 Foreground="White" />
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5">
+            <Slider  Width="151" Height="18"/>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label                
+                Content="88"
+                FontFamily="Tw Cen MT Condensed Extra Bold"
+                Background="#FF443424" 
+                BorderBrush="#FF3C1617" 
+                BorderThickness="3" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Top"
+                Height="25" 
+                Width="34"
+                FontSize="18"
+                Foreground="White" Padding="5,0,5,0"
+                />
+        </Viewbox>
+        <Viewbox Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="5">
+            <Slider Width="151" Height="18"/>
+        </Viewbox>
+        <Viewbox Grid.Column="9" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label                
+                Content="12"
+                FontFamily="Tw Cen MT Condensed Extra Bold"
+                Background="#FF443424" 
+                BorderBrush="#FF3C1617" 
+                BorderThickness="3" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Top"
+                Height="25" 
+                Width="34"
+                FontSize="18"
+                Foreground="White" Padding="5,0,5,0"
+                />
+        </Viewbox>
+        <Viewbox Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="11">
+            <Slider Width="151" Height="18"/>
+        </Viewbox>
+        <Viewbox Grid.Column="14" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label                
+                Content="88"
+                FontFamily="Tw Cen MT Condensed Extra Bold"
+                Background="#FF443424" 
+                BorderBrush="#FF3C1617" 
+                BorderThickness="3" 
+                HorizontalContentAlignment="Center" 
+                VerticalContentAlignment="Top"
+                Height="25" 
+                Width="34"
+                FontSize="18"
+                Foreground="White" Padding="5,0,5,0"
+                />
         </Viewbox>
 
     </Grid>
