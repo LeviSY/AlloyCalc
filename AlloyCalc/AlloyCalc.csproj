@@ -30,7 +30,9 @@
     <Resource Include="resources\bismuth_bronze.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
-    <Resource Include="resources\brass.png" />
+    <Resource Include="resources\brass.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
     <Resource Include="resources\copper.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>

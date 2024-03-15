@@ -42,14 +42,14 @@
         </Grid.Background>
         <Viewbox Grid.Column="4" Grid.ColumnSpan="7" Grid.Row="1">
             <ComboBox 
-                Name="AlloySelection"
-                SelectedIndex="0" 
+                Name="AlloySelection"                
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
-                FontSize="20" 
+                FontSize="20"
                 Background="#eccdae" 
                 Height="27" Width="300">
-                <TextBlock TextWrapping="Wrap" Text="Tin Bronze"/>
-                <ComboBoxItem Content="Bismut Bronze"/>
+                <TextBlock TextWrapping="Wrap"/>
+                <ComboBoxItem Content="Tin Bronze"/>
+                <ComboBoxItem Content="Bismuth Bronze"/>
                 <ComboBoxItem Content="Black Bronze"/>
                 <ComboBoxItem Content="Brass"/>
             </ComboBox>
@@ -77,7 +77,8 @@
 
         <Viewbox Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="1" >
             <Border BorderThickness="3" BorderBrush="#FF3C1617" >
-                <Image x:Name="metal_1" 
+                <Image x:Name="metal_1"
+                       
                        Source="resources/copper.png" 
                        Height="73" Width="73"/>
                 <Border.Resources>
@@ -165,7 +166,7 @@
                 IsSnapToTickEnabled="True" 
                 Ticks="89,90,91"
                 Width="151" Height="18" 
-                Minimum="88" Maximum="92" SmallChange="1" ValueChanged="metal1_slider_ValueChanged"/>
+                Minimum="88" Maximum="92" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged"/>
         </Viewbox>
         <Viewbox Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Label x:Name="metal1_label"                
@@ -188,7 +189,7 @@
                 Width="151" Height="18"
                 IsSnapToTickEnabled="True" 
                 Ticks="9,10,11"
-                Minimum="8" Maximum="12"/>
+                Minimum="8" Maximum="12" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged"/>
         </Viewbox>
         <Viewbox Grid.Column="9" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal2_label"               
@@ -207,11 +208,15 @@
         </Viewbox>
         <Viewbox Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="11">
             <Slider x:Name="metal3_slider"
-                Width="151" Height="18"/>
+                Width="151" Height="18" 
+                ValueChanged="all_metal_sliders_ValueChanged"
+                IsSnapToTickEnabled="True" 
+                IsEnabled="False"
+                SmallChange="1" />
         </Viewbox>
         <Viewbox Grid.Column="14" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal3_label"
-                   
+                Content="{Binding ElementName=metal3_slider, Path=Value}"
                 FontFamily="Tw Cen MT Condensed Extra Bold"
                 Background="#FF443424" 
                 BorderBrush="#FF3C1617" 
