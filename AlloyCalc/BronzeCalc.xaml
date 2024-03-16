@@ -46,7 +46,7 @@
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
                 FontSize="20"
                 Background="#eccdae" 
-                Height="27" Width="300">
+                Height="27" Width="300" SelectedIndex="1">
                 <TextBlock TextWrapping="Wrap"/>
                 <ComboBoxItem Content="Tin Bronze"/>
                 <ComboBoxItem Content="Bismuth Bronze"/>
@@ -77,7 +77,7 @@
 
         <Viewbox Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="1" >
             <Border BorderThickness="3" BorderBrush="#FF3C1617" >
-                <Image x:Name="metal_1"
+                <Image x:Name="metal1_image"
                        
                        Source="resources/copper.png" 
                        Height="73" Width="73"/>
@@ -90,7 +90,7 @@
         </Viewbox>
         <Viewbox Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="3">
             <Border BorderThickness="3" BorderBrush="#FF3C1617">
-                <Image x:Name="metal_2"
+                <Image x:Name="metal2_image"
                        Source="/resources/tin.png" 
                        Height="73" Width="73"/>
                 <Border.Resources>
@@ -102,7 +102,7 @@
         </Viewbox>
         <Viewbox Grid.Column="11" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="3">
             <Border BorderThickness="3" BorderBrush="#FF3C1617">
-                <Image x:Name="metal_3" 
+                <Image x:Name="metal3_image" 
                        Source="/resources/missing_image.png" 
                        Height="73" Width="73"/>
                 <Border.Resources>
