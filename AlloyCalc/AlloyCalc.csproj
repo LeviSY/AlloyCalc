@@ -10,39 +10,44 @@
 
   <ItemGroup>
     <None Remove="resources\background.png" />
-    <None Remove="resources\bismuth_bronze.png" />
-    <None Remove="resources\blackbronze.png" />
+    <None Remove="resources\bismuth.png" />
     <None Remove="resources\brass.png" />
     <None Remove="resources\copper.png" />
+    <None Remove="resources\gold.png" />
     <None Remove="resources\missing_image.png" />
+    <None Remove="resources\silver.png" />
     <None Remove="resources\tin.png" />
-    <None Remove="resources\tin_bronze.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="resources\blackbronze.png" />
+    <None Remove="resources\zinc.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="resources\background.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
-    <Resource Include="resources\bismuth_bronze.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\brass.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\copper.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\missing_image.png" />
-    <Resource Include="resources\tin.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="resources\tin_bronze.png">
-      <CopyToOutputDirectory></CopyToOutputDirectory>
-    </Resource>
+    <Content Include="resources\bismuth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\brass.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\copper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\missing_image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\silver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\tin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\zinc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

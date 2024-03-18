@@ -42,13 +42,12 @@
         </Grid.Background>
         <Viewbox Grid.Column="4" Grid.ColumnSpan="7" Grid.Row="1">
             <ComboBox 
-                Name="AlloySelection"                
+                Name="AlloySelection"
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
                 FontSize="20"
                 Background="#eccdae" 
-                Height="27" Width="300" SelectedIndex="1">
-                <TextBlock TextWrapping="Wrap"/>
-                <ComboBoxItem Content="Tin Bronze"/>
+                Height="27" Width="300" SelectionChanged="AlloySelection_SelectionChanged" >
+                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Text="Tin Bronze"/>
                 <ComboBoxItem Content="Bismuth Bronze"/>
                 <ComboBoxItem Content="Black Bronze"/>
                 <ComboBoxItem Content="Brass"/>
@@ -66,7 +65,7 @@
                 FontFamily="Tw Cen MT Condensed Extra Bold" 
                 FontSize="35" 
                 MaxLength="6"
-                Background="#eccdae">
+                Background="#eccdae" TextChanged="TotalAlloyValue_TextChanged">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -78,8 +77,7 @@
         <Viewbox Grid.Row="6" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="1" >
             <Border BorderThickness="3" BorderBrush="#FF3C1617" >
                 <Image x:Name="metal1_image"
-                       
-                       Source="resources/copper.png" 
+                       Source="/resources/missing_image.png"
                        Height="73" Width="73"/>
                 <Border.Resources>
                     <Style TargetType="Border">
@@ -91,7 +89,7 @@
         <Viewbox Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="6" Grid.RowSpan="3">
             <Border BorderThickness="3" BorderBrush="#FF3C1617">
                 <Image x:Name="metal2_image"
-                       Source="/resources/tin.png" 
+                       Source="/resources/missing_image.png" 
                        Height="73" Width="73"/>
                 <Border.Resources>
                     <Style TargetType="Border">
@@ -162,11 +160,10 @@
         </Viewbox>
         <Viewbox Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5">
             <Slider x:Name="metal1_slider" 
-                Value="88"
-                IsSnapToTickEnabled="True" 
-                Ticks="89,90,91"
+                Value="0"
+                IsSnapToTickEnabled="True"
                 Width="151" Height="18" 
-                Minimum="88" Maximum="92" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged"/>
+                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False"/>
         </Viewbox>
         <Viewbox Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Label x:Name="metal1_label"                
@@ -185,11 +182,10 @@
         </Viewbox>
         <Viewbox Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="5">
             <Slider x:Name="metal2_slider"
-                Value="12"
+                Value="0"
                 Width="151" Height="18"
-                IsSnapToTickEnabled="True" 
-                Ticks="9,10,11"
-                Minimum="8" Maximum="12" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged"/>
+                IsSnapToTickEnabled="True"
+                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False"/>
         </Viewbox>
         <Viewbox Grid.Column="9" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal2_label"               
@@ -212,7 +208,7 @@
                 ValueChanged="all_metal_sliders_ValueChanged"
                 IsSnapToTickEnabled="True" 
                 IsEnabled="False"
-                SmallChange="1" />
+                SmallChange="1" Maximum="0" />
         </Viewbox>
         <Viewbox Grid.Column="14" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal3_label"
