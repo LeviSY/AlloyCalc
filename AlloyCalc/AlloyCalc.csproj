@@ -14,6 +14,7 @@
     <None Remove="resources\brass.png" />
     <None Remove="resources\copper.png" />
     <None Remove="resources\gold.png" />
+    <None Remove="resources\lead.png" />
     <None Remove="resources\missing_image.png" />
     <None Remove="resources\silver.png" />
     <None Remove="resources\tin.png" />
@@ -34,6 +35,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\gold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\lead.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="resources\missing_image.png">

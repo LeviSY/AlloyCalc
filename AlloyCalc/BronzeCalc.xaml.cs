@@ -60,8 +60,8 @@ namespace AlloyCalc
                     metal1_slider.Value = 100 - (metal3_slider.Value + metal2_slider.Value);
                     metal2_slider.Value = 100 - (metal3_slider.Value + metal1_slider.Value);
                 }
+                lockChanges = false;
             }
-            lockChanges = false;
         }
 
         private void AlloySelection_SelectionChanged(object sender, SelectionChangedEventArgs e) //metal icons
@@ -74,24 +74,88 @@ namespace AlloyCalc
                 metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/copper.png");
                 metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/tin.png");
                 metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
             }
             if (AlloySelection.SelectedIndex == 1)
             {
                 metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/copper.png");
                 metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/zinc.png");
                 metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/bismuth.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
             }
             if (AlloySelection.SelectedIndex == 2)
             {
                 metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/copper.png");
                 metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/silver.png");
                 metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/gold.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
             }
             if (AlloySelection.SelectedIndex == 3)
             {
                 metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/copper.png");
                 metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/zinc.png");
                 metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
+            }
+            if (AlloySelection.SelectedIndex == 4)
+            {
+                metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/lead.png");
+                metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/tin.png");
+                metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
+            }
+            if (AlloySelection.SelectedIndex == 5)
+            {
+                metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/copper.png");
+                metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/lead.png");
+                metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
+            }
+            if (AlloySelection.SelectedIndex == 6)
+            {
+                metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/silver.png");
+                metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/tin.png");
+                metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
+            }
+            if (AlloySelection.SelectedIndex == 7)
+            {
+                metal1_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/gold.png");
+                metal2_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/silver.png");
+                metal3_image.Source = (ImageSource)new ImageSourceConverter().ConvertFromString(@"resources/missing_image.png");
+                TotalAlloyValue.Text = "";
+                TotalAlloyValue.Focus();
+                metal_cost1.Content = "0";
+                metal_cost2.Content = "0";
+                metal_cost3.Content = "0";
             }
             all_sliders_changes();
             lockChanges = false;
@@ -180,6 +244,87 @@ namespace AlloyCalc
                 metal3_slider.Value = 0;
 
             }
+            if (AlloySelection.SelectedIndex == 4)
+            {
+                metal1_slider.IsEnabled = true;
+                metal1_slider.Ticks = [46, 47, 48, 49, 50, 51, 52, 53, 54];
+                metal1_slider.Minimum = 45;
+                metal1_slider.Maximum = 55;
+                metal1_slider.Value = 45;
+
+                metal2_slider.IsEnabled = true;
+                metal2_slider.Ticks = [46, 47, 48, 49, 50, 51, 52, 53, 54];
+                metal2_slider.Minimum = 45;
+                metal2_slider.Maximum = 55;
+                metal2_slider.Value = 55;
+
+                metal3_slider.IsEnabled = false;
+                metal3_slider.Ticks = [0];
+                metal3_slider.Minimum = 0;
+                metal3_slider.Maximum = 0;
+                metal3_slider.Value = 0;
+            }
+            if (AlloySelection.SelectedIndex == 5)
+            {
+                metal1_slider.IsEnabled = true;
+                metal1_slider.Ticks = [9, 10, 11];
+                metal1_slider.Minimum = 8;
+                metal1_slider.Maximum = 12;
+                metal1_slider.Value = 12;
+
+                metal2_slider.IsEnabled = true;
+                metal2_slider.Ticks = [89, 90, 91];
+                metal2_slider.Minimum = 88;
+                metal2_slider.Maximum = 92;
+                metal2_slider.Value = 88;
+
+                metal3_slider.IsEnabled = false;
+                metal3_slider.Ticks = [0];
+                metal3_slider.Minimum = 0;
+                metal3_slider.Maximum = 0;
+                metal3_slider.Value = 0;
+            }
+            if (AlloySelection.SelectedIndex == 6)
+            {
+                metal1_slider.IsEnabled = true;
+                metal1_slider.Ticks = [41, 42, 43, 44, 45, 46, 47, 48, 49];
+                metal1_slider.Minimum = 40;
+                metal1_slider.Maximum = 50;
+                metal1_slider.Value = 40;
+
+                metal2_slider.IsEnabled = true;
+                metal2_slider.Ticks = [51, 52, 53, 54, 55, 56, 57, 58, 59];
+                metal2_slider.Minimum = 50;
+                metal2_slider.Maximum = 60;
+                metal2_slider.Value = 60;
+
+                metal3_slider.IsEnabled = false;
+                metal3_slider.Ticks = [0];
+                metal3_slider.Minimum = 0;
+                metal3_slider.Maximum = 0;
+                metal3_slider.Value = 0;
+            }
+            if (AlloySelection.SelectedIndex == 7)
+            {
+                metal1_slider.IsEnabled = true;
+                metal1_slider.Ticks = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59];
+                metal1_slider.Minimum = 40;
+                metal1_slider.Maximum = 60;
+                metal1_slider.Value = 40;
+
+                metal2_slider.IsEnabled = true;
+                metal2_slider.Ticks = [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59];
+                metal2_slider.Minimum = 40;
+                metal2_slider.Maximum = 60;
+                metal2_slider.Value = 60;
+
+                metal3_slider.IsEnabled = false;
+                metal3_slider.Ticks = [0];
+                metal3_slider.Minimum = 0;
+                metal3_slider.Maximum = 0;
+                metal3_slider.Value = 0;
+
+            }
         }
 
         private void TotalAlloyValue_TextChanged(object sender, TextChangedEventArgs e)
@@ -190,11 +335,16 @@ namespace AlloyCalc
                 TotalAlloyValue.SelectAll();
             }
 
-            metal_cost1.Content = Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal1_label.Content));
-            metal_cost2.Content = Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal2_label.Content));
-            metal_cost3.Content = Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal3_label.Content));
-            
-            
+            metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal1_label.Content)),0);
+            metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal2_label.Content)),0);
+            metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal3_label.Content)),0);
+        }
+
+        private void all_sliders_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        {
+            metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal1_label.Content)), 0);
+            metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal2_label.Content)), 0);
+            metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal3_label.Content)), 0);
         }
     }
 }

@@ -51,6 +51,10 @@
                 <ComboBoxItem Content="Bismuth Bronze"/>
                 <ComboBoxItem Content="Black Bronze"/>
                 <ComboBoxItem Content="Brass"/>
+                <ComboBoxItem Content="Lead Solder"/>
+                <ComboBoxItem Content="Molybdochalkos"/>
+                <ComboBoxItem Content="Silver Solder"/>
+                <ComboBoxItem Content="Electrum"/>
             </ComboBox>
         </Viewbox>
 
@@ -163,7 +167,7 @@
                 Value="0"
                 IsSnapToTickEnabled="True"
                 Width="151" Height="18" 
-                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False"/>
+                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False" Thumb.DragDelta="all_sliders_DragDelta"/>
         </Viewbox>
         <Viewbox Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Label x:Name="metal1_label"                
@@ -185,7 +189,7 @@
                 Value="0"
                 Width="151" Height="18"
                 IsSnapToTickEnabled="True"
-                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False"/>
+                Minimum="0" Maximum="0" SmallChange="1" ValueChanged="all_metal_sliders_ValueChanged" IsEnabled="False" Thumb.DragDelta="all_sliders_DragDelta"/>
         </Viewbox>
         <Viewbox Grid.Column="9" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal2_label"               
@@ -208,7 +212,7 @@
                 ValueChanged="all_metal_sliders_ValueChanged"
                 IsSnapToTickEnabled="True" 
                 IsEnabled="False"
-                SmallChange="1" Maximum="0" />
+                SmallChange="1" Maximum="0" Thumb.DragDelta="all_sliders_DragDelta" />
         </Viewbox>
         <Viewbox Grid.Column="14" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left">
             <Label x:Name="metal3_label"
