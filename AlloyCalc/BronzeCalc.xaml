@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AlloyCalc"
         mc:Ignorable="d"
-        Title="Calculator" Height="480" Width="720">
+        Title="Calculator" Height="480" Width="720"
+        Icon="resources/vs_icon.png">
+        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
