@@ -18,6 +18,7 @@
     <None Remove="resources\missing_image.png" />
     <None Remove="resources\silver.png" />
     <None Remove="resources\tin.png" />
+    <None Remove="resources\vs_icon.ico" />
     <None Remove="resources\vs_icon.png" />
     <None Remove="resources\zinc.png" />
   </ItemGroup>
@@ -25,6 +26,9 @@
   <ItemGroup>
     <Resource Include="resources\background.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="resources\vs_icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Content Include="resources\bismuth.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
