@@ -216,7 +216,7 @@ namespace AlloyCalc
                 metal1_slider.Ticks = [61, 62, 63, 64, 65, 66, 67, 68, 69];
                 metal1_slider.Minimum = 60;
                 metal1_slider.Maximum = 70;
-                metal1_slider.Value = 40;
+                metal1_slider.Value = 70;
 
                 metal2_slider.IsEnabled = true;
                 metal2_slider.Ticks = [31, 32, 33, 34, 35, 36, 37, 38, 39];
@@ -322,18 +322,18 @@ namespace AlloyCalc
                 TotalAlloyValue.SelectAll();
             }
 
-            metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal1_label.Content)),0);
-            metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal2_label.Content)),0);
-            metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal3_label.Content)),0);
+            metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal1_label.Content)),0);
+            metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal2_label.Content)),0);
+            metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal3_label.Content)),0);
         }
 
         private void all_sliders_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
         {
             if(TotalAlloyValue.Text != "0" && TotalAlloyValue.Text != "")
             {
-                metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal1_label.Content)), 0);
-                metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal2_label.Content)), 0);
-                metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0." + Convert.ToString(metal3_label.Content)), 0);
+                metal_cost1.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal1_label.Content)), 0);
+                metal_cost2.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal2_label.Content)), 0);
+                metal_cost3.Content = Math.Round(Convert.ToDouble(TotalAlloyValue.Text) * Convert.ToDouble("0," + Convert.ToString(metal3_label.Content)), 0);
             }
             
         }
