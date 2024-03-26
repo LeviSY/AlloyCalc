@@ -216,7 +216,7 @@ namespace AlloyCalc
                 metal1_slider.Ticks = [61, 62, 63, 64, 65, 66, 67, 68, 69];
                 metal1_slider.Minimum = 60;
                 metal1_slider.Maximum = 70;
-                metal1_slider.Value = 40;
+                metal1_slider.Value = 70;
 
                 metal2_slider.IsEnabled = true;
                 metal2_slider.Ticks = [31, 32, 33, 34, 35, 36, 37, 38, 39];
